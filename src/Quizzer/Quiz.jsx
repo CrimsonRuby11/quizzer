@@ -43,6 +43,11 @@ const Quiz = () => {
         }
     }
 
+    const clickDiv = (i) => {
+        var selectRadio = document.getElementById(i);
+        selectRadio.checked = true;
+    }
+
     return(
     
         <div class="mainBody">
@@ -54,32 +59,33 @@ const Quiz = () => {
 
                 <p id="questionText" class="questionText">{question.question}</p>
                 <form class="formBody">
-                    <div>
-                    <input type="radio" name="option" id="1"></input>
-                    <label ref={optiontext1} class="optionText" id="textoption1">{question.option1}</label>
+                    <div onClick={() => clickDiv(1)}>
+                        <input type="radio" name="option" id="1"></input>
+                        <label ref={optiontext1} class="optionText" id="textoption1">{question.option1}</label>
                     </div>
-                    <div>
-                    <input type="radio" name="option" id="2"></input>
-                    <label ref={optiontext2} class="optionText" id="textoption2">{question.option2}</label>
+                    <div onClick={() => clickDiv(2)}>
+                        <input type="radio" name="option" id="2"></input>
+                        <label ref={optiontext2} class="optionText" id="textoption2">{question.option2}</label>
                     </div>
-                    <div>
-                    <input type="radio" name="option" id="3"></input>
-                    <label ref={optiontext3} class="optionText" id="textoption3">{question.option3}</label>
+                    <div onClick={() => clickDiv(3)}>
+                        <input type="radio" name="option" id="3"></input>
+                        <label ref={optiontext3} class="optionText" id="textoption3">{question.option3}</label>
                     </div>
-                    <div>
-                    <input type="radio" name="option" id="4"></input>
-                    <label ref={optiontext4} class="optionText" id="textoption4">{question.option4}</label>
+                    <div onClick={() => clickDiv(4)}>
+                        <input type="radio" name="option" id="4"></input>
+                        <label ref={optiontext4} class="optionText" id="textoption4">{question.option4}</label>
                     </div>
                 </form>
 
-                <button id="nextBtn" onClick={onNextBtn}>Next</button>
+                <button class="nextBtn" onClick={onNextBtn}>Next</button>
                 <p class="remainingText">Remaining {data.length - questionIndex} questions</p>
                 <p class="remainingText">Score: {score}</p>
             </div>
 
             <div id="ScoreBody" hidden="true">
                 <div class="questionText scoreText">
-                    <p>Your Score: {score}</p>
+                    <p>Your Score: {score} Out of {data.length}</p>
+                    <button class="nextBtn" onClick={() => window.location.reload()}>Reload</button>
                 </div>
             </div>
 
