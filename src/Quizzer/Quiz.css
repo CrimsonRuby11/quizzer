@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color:rgb(255, 232, 200);
+}
+
+.mainBody {
+    text-align: center;
+    margin: 100px 20%;
+    padding: 20px 50px;
+    background-color: rgb(172, 215, 147);
+    border-radius: 20px;
+}
+
+h1 {
+    margin: 5px;
+}
+
+.subtitle {
+    margin-top: 10px;
+}
+
+.questionText {
+    margin: 2px;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.formBody {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 15%;
+    background-color: rgb(255, 201, 111);
+    padding: 15px 30px;
+    border-radius: 20px;
+}
+
+.formBody div {
+    margin: 5px;
+    padding: 10px;
+    background-color: rgba(255, 232, 200, 75%);
+    border-radius: 5px;
+}
+
+.formBody div * {
+    margin: 5px;
+}
+
+button {
+    padding: 5px 20px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.remainingText {
+    margin-top: 2px;
+    text-align: right;
+    font-size: 16px;
+}
+
+#scoreBody {
+    background-color: rgb(255, 201, 111);
+}
